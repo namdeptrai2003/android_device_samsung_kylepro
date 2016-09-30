@@ -7,6 +7,8 @@ on early-init
     chown system system /sys/devices/platform/pwm-backlight.0/backlight/panel/brightness
 
 on init
+
+    mount debugfs /sys/kernel/debug /sys/kernel/debug mode=755
     mkdir /tmp
     mount tmpfs tmpfs /tmp
     chmod 1775 /tmp
@@ -141,7 +143,6 @@ on boot
     setprop ro.build.product hawaii
     setprop ro.product.device hawaii
 
-    mount debugfs /sys/kernel/debug /sys/kernel/debug
 
 # WIFI
     setprop wifi.interface wlan0
