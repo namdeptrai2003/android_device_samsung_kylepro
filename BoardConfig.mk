@@ -45,8 +45,6 @@ BOARD_BOOTIMAGE_PARTITION_SIZE              := 8388608
 BOARD_RECOVERYIMAGE_PARTITION_SIZE          := 9191424
 BOARD_SYSTEMIMAGE_PARTITION_SIZE            := 1210769408
 BOARD_SYSTEMIMAGE_JOURNAL_SIZE              := 0
-# Actual size is 2373976064
-# Reduced by 16384 to fix device encryption.
 BOARD_USERDATAIMAGE_PARTITION_SIZE          := 2373959680
 BOARD_CACHEIMAGE_PARTITION_SIZE             := 209715200
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE           := ext4
@@ -56,7 +54,7 @@ BOARD_FLASH_BLOCK_SIZE                      := 262144
 BOARD_HAVE_BLUETOOTH                        := true
 BOARD_HAVE_BLUETOOTH_BCM                    := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/kylepro/bluetooth
-BOARD_BLUEDROID_VENDOR_CONF                 := device/samsung/kylepro/bluetooth/libbt_vndcfg.txt
+BOARD_CUSTOM_BT_CONFIG                      := device/samsung/kylepro/bluetooth/libbt_vndcfg.txt
 
 # Connectivity - Wi-Fi
 BOARD_HAVE_SAMSUNG_WIFI                     := true
@@ -81,20 +79,20 @@ WIFI_BAND                                   := 802_11_ABG
 # LightHAL
 TARGET_PROVIDES_LIBLIGHT                    := true
 
+# PowerHAL
+TARGET_POWERHAL_VARIANT                     := hawaii
+TARGET_USES_CPU_BOOST_HINT                  := true
 
 # Resolution
 TARGET_SCREEN_HEIGHT                        := 800
 TARGET_SCREEN_WIDTH                         := 480
 
-#Clang-Build
-USE_CLANG_PLATFORM_BUILD                    := true
 
 # Hardware rendering
 USE_OPENGL_RENDERER                         := true
 BOARD_USE_MHEAP_SCREENSHOT                  := true
 BOARD_EGL_WORKAROUND_BUG_10194508           := true
 TARGET_USES_ION                             := true
-#HWUI_COMPILE_FOR_PERF                       := true
 COMMON_GLOBAL_CFLAGS                        += -DNEEDS_VECTORIMPL_SYMBOLS -DHAWAII_HWC -DADD_LEGACY_ACQUIRE_BUFFER_SYMBOL
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK       := true
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS       := true
@@ -165,11 +163,12 @@ BOARD_VOLD_MAX_PARTITIONS                   := 19
 # MTP
 BOARD_MTP_DEVICE                            := /dev/mtp_usb
 
-# CMHW
-BOARD_HARDWARE_CLASS                        := hardware/samsung/cmhw/
-
 # GPS
 TARGET_SPECIFIC_HEADER_PATH                 := device/samsung/kylepro/include
+COMMON_GLOBAL_CFLAGS                        += -DCOMPAT_SENSORS_M
+
+# Some of our vendor libs have text relocation
+TARGET_NEEDS_TEXT_RELOCATIONS               := true
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \

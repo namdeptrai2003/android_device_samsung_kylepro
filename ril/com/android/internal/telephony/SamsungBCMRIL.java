@@ -28,6 +28,7 @@ import android.telephony.Rlog;
 import com.android.internal.telephony.RILConstants;
 import java.util.Collections;
 import android.telephony.PhoneNumberUtils;
+import com.android.internal.telephony.uicc.IccUtils;
 
 import java.util.ArrayList;
 
@@ -40,13 +41,13 @@ public class SamsungBCMRIL extends RIL implements CommandsInterface {
 
     private static int sEnabledDataSimId = -1;
 
-    public SamsungBCMRIL(Context context, int preferredNetworkType, int cdmaSubscription) {
-        this(context, preferredNetworkType, cdmaSubscription, null);
+    public SamsungBCMRIL(Context context, int networkMode, int cdmaSubscription) {
+        this(context, networkMode, cdmaSubscription, null);
     }
 
-    public SamsungBCMRIL(Context context, int preferredNetworkType,
+    public SamsungBCMRIL(Context context, int networkMode,
             int cdmaSubscription, Integer instanceId) {
-        super(context, preferredNetworkType, cdmaSubscription, instanceId);
+        super(context, networkMode, cdmaSubscription, instanceId);
         mQANElements = 6;
     }
 
