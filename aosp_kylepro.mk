@@ -7,4 +7,4 @@ PRODUCT_NAME := aosp_kylepro
 # Set build fingerprint / ID / Product Name etc.
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=aosp_kylepro \
-    TARGET_DEVICE=kylepro \
+    TARGET_DEVICE=kylepro 

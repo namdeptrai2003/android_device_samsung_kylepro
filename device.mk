@@ -121,7 +121,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.call_ring.multiple=0 \
     camera2.portability.force_api=1 \
     ro.telephony.call_ring=0 \
-    ro.build.selinux=1 \
+    ro.build.selinux=1 
 
 # Enable Google-specific location features,
 # like NetworkLocationProvider and LocationCollector
