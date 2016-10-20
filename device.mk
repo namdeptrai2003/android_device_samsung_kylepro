@@ -39,6 +39,15 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.secure=0 \
     ro.adb.secure=0 \
 
+# Filesystem management tools
+PRODUCT_PACKAGES += \
+    make_ext4fs \
+    e2fsck \
+    setup_fs \
+    make_f2fs \
+    fsck.f2fs \
+    fibmap.f2fs
+
 # GPS/RIL
 PRODUCT_PACKAGES += \
     libglgps-compat \
@@ -67,11 +76,6 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
 
-# Filesystem management tools
-PRODUCT_PACKAGES += \
-    make_ext4fs \
-    e2fsck \
-    setup_fs
 
 # KSM
 PRODUCT_PROPERTY_OVERRIDES += \
