@@ -1,4 +1,4 @@
-# LineageOS 14.1  Device tree for Samsung GT-S7580 (kylepro)
+# AOSPA 7.1.0 device tree for Samsung GT-S7580 (kylepro)
 
 ### Specs (Physically inspected):
   - CPU: Cortex-A9 (Little endian, Dual Core)
@@ -19,13 +19,18 @@
   - WIFI/Bluetooth/FM-Radio: BCM4330
 
 ### Notice:
-  - Apply patch *PATCH_CM-14.1.diff* to root directory of LOS-14.1 source code before build
+  - Run these commands while you are on the root directory of AOSPA 7.1.0 source code to patch it before building the ROM:
+```
+chmod +x device/samsung/kylepro/patch
+device/samsung/kylepro/patch
+patch -p1 < device/samsung/kylepro/AOSPA\ 7.1.0\ patches.diff
+```
 
-### Other resource:
-  - Kernel source: https://github.com/ishantvivek/android_kernel_samsung_kyleproxx
-  - Vendor blobs: https://github.com/ishantvivek/android_vendor_samsung_kyleproxx
+### Other resources:
+  - Kernel source: https://github.com/Samsung-KYLEPROXX/android_kernel_samsung_kyleproxx/tree/cm-13.0
+  - Vendor blobs: https://github.com/TheComputerGuy96/android_vendor_samsung_kyleproxx/tree/nougat-mr1
 
-### More Information:
+### More information:
 ```sh
 $ cat /proc/cpuinfo
 Processor       : ARMv7 Processor rev 0 (v7l)                    
@@ -71,11 +76,12 @@ mmcblk0p18: 0000f000 00000400 "HIDDEN"
 mmcblk0p19: 0046c000 00000400 "userdata"
 ```
 
-### Credits (Sort by alphabetical order):
-  - ghsr
-  - Pawitp
-  - Sandpox
-  - TheComputerGuy96
-  - The CyanogenMod Team
+### Thanks to:
+  - ishantvivek
+  - pawitp
+  - CyanogenMod
   - TheNikiz
-  - Zim555
+  - ZIM555
+  - ghsr
+  - SandPox
+  - sostk
