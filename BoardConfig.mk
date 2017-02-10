@@ -45,7 +45,7 @@ TARGET_KERNEL_HAVE_NTFS                     := true
 
 # Partition size
 BOARD_BOOTIMAGE_PARTITION_SIZE              := 8388608
-ifeg ($(BUILD_TWRP), true)
+ifeq ($(BUILD_TWRP), true)
 BOARD_RECOVERYIMAGE_PARTITION_SIZE          := 9191424
 else
 BOARD_RECOVERYIMAGE_PARTITION_SIZE          := 20000000
