@@ -1,3 +1,0 @@
-add_lunch_combo pa_kylepro-eng
-add_lunch_combo pa_kylepro-userdebug
-add_lunch_combo pa_kylepro-user
