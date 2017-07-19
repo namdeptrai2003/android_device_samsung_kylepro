@@ -19,7 +19,10 @@
   - WIFI/Bluetooth/FM-Radio: BCM4330
 
 ### Notice:
-  - Apply patch *PATCH_DU-7.1.2.diff* to root directory of DU-7.1.2 source code before build
+  - Run this command while you are on the root directory of DU 7.1.2 source code to patch it before building the ROM:
+```
+patch -p1 < device/samsung/kylepro/DU\ 7.1.2\ patches.diff
+```
 
 ### Other resource:
   - Kernel source: https://github.com/ishantvivek/android_kernel_samsung_kyleproxx
