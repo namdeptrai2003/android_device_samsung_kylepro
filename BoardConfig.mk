@@ -182,5 +182,4 @@ TARGET_SPECIFIC_HEADER_PATH                 := device/samsung/kylepro/include
 # SELinux
 BOARD_SEPOLICY_DIRS += \
     device/samsung/kylepro/sepolicy
-ANDROID_COMPILE_WITH_JACK := false
 
