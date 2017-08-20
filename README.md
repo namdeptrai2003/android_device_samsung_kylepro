@@ -1,4 +1,4 @@
-# Hexagon 7.1.x  Device tree for Samsung GT-S7580 (kylepro)
+# AtomicOS 7.1.x  Device tree for Samsung GT-S7580 (kylepro)
 
 ### Specs (Physically inspected):
   - CPU: Cortex-A9 (Little endian, Dual Core)
@@ -19,9 +19,9 @@
   - WIFI/Bluetooth/FM-Radio: BCM4330
 
 ### Notice:
-  - Apply patch *PATCH_HEX-7.1.x.diff* to root directory of HEX-7.1.x source code before build
+  - Apply patch *PATCH_ATOMIC-7.1.x.diff* to root directory of HEX-7.1.x source code before build
   
-    patch -p1 < device/samsung/kylepro/HEX\ 7.1.x\ patches.diff
+    patch -p1 < device/samsung/kylepro/ATOMIC\ 7.1.x\ patches.diff
 
 ### Other resource:
   - Kernel source: https://github.com/ishantvivek/kernel_kyleproxx
