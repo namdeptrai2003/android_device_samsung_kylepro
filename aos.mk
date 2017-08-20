@@ -1,5 +1,5 @@
 # Inherit some common AtomicOS stuff.
-$(call inherit-product, vendor/aos/config/common_mini_phone.mk)
+$(call inherit-product, vendor/aos/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/samsung/kylepro/full_kylepro.mk)
