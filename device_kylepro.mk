@@ -167,3 +167,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_kylepro
 PRODUCT_DEVICE := kylepro
 PRODUCT_MODEL := GT-S7580
+
+# Telephony-ext
+PRODUCT_PACKAGES += telephony-ext
+PRODUCT_BOOT_JARS += telephony-ext
