@@ -1,3 +1,3 @@
-add_lunch_combo viper_kylepro-user
-add_lunch_combo viper_kylepro-userdebug
-add_lunch_combo viper_kylepro-eng
+add_lunch_combo pa_kylepro-user
+add_lunch_combo pa_kylepro-userdebug
+add_lunch_combo pa_kylepro-eng
